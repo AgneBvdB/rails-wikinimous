@@ -18,4 +18,7 @@ require 'faker'
 # Faker::Alphanumeric.alpha(number: 10) #=> "zlvubkrwga"
 # Faker::ProgrammingLanguage.name       #=> "Ruby"
 #
-10.times { article = Article.new(title: Faker::ProgrammingLanguage.name, content: Faker::Lorem.paragraph) }
+10.times do
+  article = Article.new(title: Faker::ProgrammingLanguage.name, content: Faker::Lorem.paragraph)
+  article.save!
+end
